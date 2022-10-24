@@ -1,0 +1,463 @@
+
+/*variabile culori*/
+:root {
+  --culoare_1: #ffcf00;
+  --culoare_2: #feefe5;
+  --culoare_5: #020c12;
+  --font: "Ubuntu", sans-serif;
+  --font-2: 'Smooch Sans', sans-serif;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  overflow-x: hidden;
+}
+body {
+  background: var(--culoare_2);
+
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+/* NAVBAR*/
+.max-width {
+  max-width: 1920px;
+  padding: 0 80px;
+  margin: auto;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 30px 0;
+  /* background: var(--culoare_5);  */
+  font-family: var(--font);
+  transition: all 0.3s ease;
+  z-index:9999;
+}
+
+.navbar.sticky {
+  padding: 15px 0;
+  background: var(--culoare_5);
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--culoare_1);
+}
+span#logo {
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--culoare_5);
+}
+#logo.sticky {
+  font-weight: 600;
+  color: var(--culoare_2);
+}
+#first.sticky {
+  color: var(--culoare_2);
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.5 ease;
+}
+#second.sticky {
+  color: var(--culoare_2);
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.5 ease;
+}
+#third.sticky {
+  color: var(--culoare_2);
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.5 ease;
+}
+.menu-btn {
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+#bars.sticky {
+  color: var(--culoare_2);
+}
+#first.sticky:hover {
+  color: var(--culoare_1);
+}
+#second.sticky:hover {
+  color: var(--culoare_1);
+}
+#third.sticky:hover {
+  color: var(--culoare_1);
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a {
+  color: var(--culoare_5);
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.5 ease;
+}
+
+.navbar .menu li a:hover {
+  color: var(--culoare_1);
+}
+
+/*MASTHEAD*/
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  background: url("../img/poza.png") no-repeat center;
+  height: 100vh;
+  color: var(--culoare_5);
+  min-height: 400px;
+  font-family: var(--font);
+  margin: auto;
+}
+.masthead .max-width {
+  margin: auto 0 auto 40px;
+}
+
+.masthead .masthead-content .text-1 {
+  font-size: 27px;
+}
+.masthead .masthead-content .text-2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+.masthead .masthead-content .text-3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+
+.masthead .masthead-content .text-3 span,
+.competente .competente-text .competente-list li strong span{
+  font-weight: 500;
+
+  color: var(--culoare_1);
+
+  animation: typewriter 2s steps(13) infinite alternate,
+    blink 800ms steps(13) infinite normal;
+  border-right: 5px solid var(--culoare_1);
+}
+@keyframes typewriter {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 50%;
+  }
+}
+@keyframes blink {
+  from {
+    border-color: var(--culoare_1);
+  }
+  to {
+    border-color: transparent;
+  }
+}
+
+div.arrow {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 30px;
+}
+
+.arrow a.info {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 5px 0;
+  text-decoration: none;
+  color: var(--culoare_5);
+  font-family: var(--font-2);
+}
+
+.arrow a.first-arrow  {
+  font-size: 40px;
+  color: var(--culoare_5);
+}
+
+.arrow a.first-arrow:hover {
+  color: var(--culoare_1);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.arrow a.first-arrow:hover::after {
+  content: "> > ";
+  cursor: pointer;
+}
+
+/*COMPETENTE*/
+.competente {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 100vh;
+  margin: 30%;
+
+  color: var(--culoare_5);
+  min-height: 400px;
+
+  font-family: var(--font);
+  margin: 30px 30px 100px 30px;
+  padding: 30px 30px 30px 30px;
+}
+.competente-text {
+  font-family: var(--font-2);
+  font-size: 25px;
+  text-align: left;
+  width: auto;
+  height: auto;
+ 
+}
+
+.competente-text h3 {
+  font-family: var(--font);
+  
+ 
+}
+
+
+
+/*Hobbies*/
+.hobbies {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  color: var(--culoare_5);
+  min-height: 400px;
+  font-family: var(--font);
+  margin: 20 auto;
+}
+.hobbies-text {
+  font-family: var(--font-2);
+  margin-top: 0px;
+  font-size: 30px;
+  text-align: left;
+  width: auto;
+  height: auto;
+}  
+.hobbies-text h1{
+  font-family: var(--font);
+}
+.hobbies-img {
+  margin-top: 200px;
+  width: auto;
+  height: auto;
+  margin-bottom:100px;
+}
+/*Animatii*/
+.masthead,
+.competente,
+.hobbies {
+  -webkit-animation-name: animatie;
+  animation-name: animatie;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: none;
+  animation-fill-mode: none;
+}
+@-webkit-keyframes animatie {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes animatie {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+.arrow {
+  -webkit-animation-name: animatie;
+  animation-name: animatie;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: none;
+  animation-fill-mode: none;
+}
+@-webkit-keyframes animatie {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes animatie {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
+
+/*Responsive media queries*/
+@media(max-width:380px){
+  *{
+    font-size:15px;
+  }
+}
+@media(max-width:450px){
+    .navbar .logo a {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--culoare_1);
+      }
+      span#logo {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--culoare_5);
+      }
+  *{
+    font-size:18px;
+  }
+     
+}
+@media(max-width:550px){
+  section.competente .competente-img img{
+    display:none;
+    }
+}
+@media (max-width: 1104px) {
+  .masthead .max-width {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .max-width {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 1310px) {
+  .masthead {
+    background: var(--culoare_2);
+    font-size: 25px;
+    margin-top:200px;
+  }
+  .competente,
+  .hobbies {
+    margin-top: 200px;
+    flex-direction: column;
+    justify-content: space-around;
+
+    width: auto;
+    height: auto;
+  }
+}
+@media (max-width: 990px) {
+  .max-width {
+    padding: 0 50px;
+  }
+
+  .menu-btn {
+    display: block;
+    z-index: 999;
+    color: var(--culoare_5);
+  }
+  .navbar .menu {
+    position: fixed;
+    background: var(--culoare_5);
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+
+    top: 0;
+    text-align: center;
+    padding-top: 80px;
+    color: var(--culoare_2);
+  }
+
+  .navbar .menu.active {
+    left: 0;
+  }
+
+  .navbar .menu li {
+    display: block;
+    color: var(--culoare_2);
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+    color: var(--culoare_2);
+  }
+  .masthead {
+    background: var(--culoare_2);
+  }
+  .masthead .masthead-content .text-1 {
+    text-align: center;
+  }
+  .masthead .masthead-content .text-2 {
+    font-size: 70px;
+    text-align: center;
+  }
+  .masthead .masthead-content .text-3 {
+    font-size: 35px;
+    text-align: center;
+  }
+  .competente,
+  .hobbies {
+    font-size: 25px;
+    text-align: center;
+    
+  }
+  .arrow{
+    margin-top:30px;
+  }
+.arrow a.info {
+    font-size: 20px;
+    text-align: center;
+  }
+.arrow a.first-arrow {
+    font-size: 50px;
+  }
+}
